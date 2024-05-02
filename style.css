@@ -352,6 +352,7 @@ footer > .bottom-bar {
 }
 .creator-wrapper > .creator > .name {
 	font-weight: bold;
+	text-align: center;
 }
 .creator-wrapper > .creator > .description {
 	margin-top: 20px;
