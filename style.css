@@ -157,6 +157,7 @@ footer > .bottom-bar {
 .game-status > p {
 	font-size: 14px;
 }
+
 .main-wrapper {
 	width: 100%;
 	height: auto;
@@ -166,6 +167,69 @@ footer > .bottom-bar {
 	align-items: center;
 	font-family: Dynamo-Regular, Sans-Serif;
 }
+.main-wrapper > .select-answer-error {
+	width: 90%;
+	height: 200px;
+	background-color: var(--text-color);
+	position: absolute;
+	z-index: 10;
+	color: #ffffff;
+	border-radius: 10px;
+	display: none;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	padding: 10px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.main-wrapper > .select-answer-error > .text {
+	font-size: 20px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.main-wrapper > .select-answer-error > .text > .bar {
+	width: 0px;
+	height: 2px;
+	background-color: #ff0000;
+	animation-name: bar-animation;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+.main-wrapper > .select-answer-error > .ok-btn {
+	width: 50%;
+	height: 40px;
+	border: none;
+	border-radius: 10px;
+	background-color: var(--accent-color);
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	color: #ffffff;
+	font-family: Dynamo-Regular, Sans-Serif;
+	transition: 250ms all;
+}
+.main-wrapper > .select-answer-error > .ok-btn:hover {
+	background-color: #8DECB4;
+}
+.main-wrapper > .select-answer-error > .ok-btn:active {
+	scale: 0.9;
+}
+@keyframes bar-animation {
+	0% {
+		width: 0px;
+	}
+	
+	50% {
+		width: 200px;
+	}
+	
+	100% {
+		width: 0px;
+	}
+}
+
 .main-wrapper > .slider {
 	width: 80%;
 	height: 500px;
@@ -233,6 +297,7 @@ footer > .bottom-bar {
 	justify-content: center;
 	align-items: center;
 	border-radius: 10px;
+	overflow: auto;
 }
 .slider > .card > .options > .selected {
 	background-color: #1d2e70;
@@ -297,6 +362,7 @@ footer > .bottom-bar {
 	text-align: left;
 	max-height: 170px;
 	overflow: auto;
+	
 }
 .explanation-wrapper > .top-bar {
 	width: 100%;
@@ -369,12 +435,67 @@ footer > .bottom-bar {
 	.creator-wrapper {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		/*grid-template-rows: repeat(3, 1fr);*/
 	}
 	.creator-wrapper > .creator-1 {
 		grid-area: 1 / 1 / 2 / 3;
 	}
 	.creator-wrapper > .creator-1 > .description {
 		width: 60%;
+	}
+	.home-wrapper > .game-title {
+		font-size: 80px;
+	}
+	.home-wrapper > .start-button {
+		width: 150px;
+		height: 60px;
+		font-size: 26px;
+	}
+	footer > h3 {
+		font-size: 16px;
+	}
+	footer > .creators > p {
+		font-size: 14px;
+	}
+	footer > a {
+		font-size: 14px;
+	}
+	
+	.game-status {
+		justify-content: center;
+	}
+	.game-status > p {
+		margin: 0 16px;
+		font-size: 18px;
+	}
+	.slider > .card > .options {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.slider > .card > .question {
+		font-size: 18px;
+	}
+	.slider > .card > .options > .option {
+		height: 70px;
+		font-size: 18px;
+	}
+	.explanation-wrapper > .explanation > .text {
+		font-size: 14px;
+	}
+	.explanation-wrapper > .explanation > p {
+		font-size: 18px;
+	}
+	
+	.slider > .score-card > div > p{
+		font-size: 22px;
+	}
+	.slider > .score-card > div > a {
+		font-size: 18px;
+		width: 100px;
+		height: 40px;
+	}
+	.main-wrapper > .next-btn {
+		width: 60%;
+		height: 40px;
+		font-size: 18px;
 	}
 }

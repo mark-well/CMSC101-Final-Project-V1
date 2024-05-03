@@ -2,6 +2,7 @@ let slider = document.querySelector(".slider");
 let nextButton = document.querySelector(".next-btn");
 let cards = slider.querySelectorAll(".card");
 let scoreDisplay = document.querySelector(".score-display");
+let selectAnswerErrorDisplay = document.querySelector(".select-answer-error");
 let remainingQuestionsDisplay = document.querySelector(".remaining-question-display");
 let numberOfScoreCard = 0;
 let currentCard = 0;
@@ -29,7 +30,8 @@ nextButton.addEventListener("click", () => {
     let explanationWrapper = cards[currentCard].querySelector(".explanation-wrapper");
     if(userAnswer == ""){
     	selectAnswer();
-    	alert("Please select an answer");
+    	selectAnswerErrorDisplay.style.display = 'flex';
+    	//alert("Please select an answer");
     }else{
     	if(explanationWrapper.style.display == "block"){
     		if(currentCard+1 == questions.length){
@@ -52,6 +54,10 @@ nextButton.addEventListener("click", () => {
     	}
     }
 });
+
+function closeSelectAnswerDisplay() {
+	selectAnswerErrorDisplay.style.display = "none";
+}
 
 //Scroll to the next card
 function scroll() {
