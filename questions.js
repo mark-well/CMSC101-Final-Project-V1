@@ -1,9 +1,11 @@
 (function () {
     //All the questions
     let data = [
-    	{"question":"Sino ang pumatay kay Lapu-Lapu?","optionA":"Magellan","optionB":"Tauhan ni Magellan","optionC":"Baril","optionD":"Nag laho na lang bigla","correctAnswer":"D. Nag laho na lang bigla","alreadyAnswered":false,"explanation":"Answer is D, Walang nakaka alam kung papaano nag laho ang bayani ng Pilipinas na si Lapu-Lapu.","_id":"fOkwUWDXWtk2FvJF"},
-		{"question":"Saan binaril si Rizal?","optionA":"Sa likod","optionB":"Bagongbayan","optionC":"Ha?","optionD":"Hatdog","correctAnswer":"C. Ha?","alreadyAnswered":false,"explanation":"The correct answer is C, Ha?, Ha???, HAHAHAHHHAHAHHAHAHAHHA.","_id":"y6hwZ8VabBSwDMAi"},
-    ];
+    	{"question":"Who was the former president of the Philippines?","optionA":"Ninoy Aquino","optionB":"Ferdinand Marcos Jr.","optionC":"Rodrigo Roa Duterte","optionD":"Mar Roxas","correctAnswer":"C. Rodrigo Roa Duterte","alreadyAnswered":false,"explanation":"Duterte became the president of the Philippines from 2016 to 2022.","_id":"1xovRKaq5GcOBHoA"},
+		{"question":"What is the color of the sky???","optionA":"Green","optionB":"Red","optionC":"Blue","optionD":"Light Blue","correctAnswer":"D. Light Blue","alreadyAnswered":false,"explanation":"You might have to go outside to see it 😊","_id":"pUrfbvjMqviXmfht"},
+		{"question":"What is the term that measures from the center to the edge of a circle?","optionA":"Circumference ","optionB":"PI","optionC":"Radius","optionD":"Diameter","correctAnswer":"C. Radius","alreadyAnswered":false,"explanation":"Radius is measured from the center of a circle to it's edge","_id":"vbhipespXbP2u7cD"},
+
+	];
 
     window.questionsData = {
         data: data
