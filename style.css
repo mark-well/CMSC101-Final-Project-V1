@@ -66,6 +66,7 @@ nav > .options > div {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	user-select: none;
 }
 #settings-active { display: none;}
 #settings-active:checked ~ .options {
@@ -126,7 +127,7 @@ footer > h3 {
 	font-size: 10px;
 }
 footer > .creators {
-	width: 30%;
+	width: 40%;
 }
 footer > .creators > p {
 	font-size: 9px;

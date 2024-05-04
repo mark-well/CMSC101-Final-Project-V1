@@ -67,9 +67,8 @@ for(let i = 0; i < questions.length; i++) {
 updateDisplay();
 selectAnswer(); //Ask the user to select an answer first
 nextButton.addEventListener("click", () => {
-    console.log(currentCard)
-    console.log(answeredQuestions)
     let explanationWrapper = cards[currentCard].querySelector(".explanation-wrapper");
+    
     //If user didn't select an answer
     if(userAnswer == ""){
     	selectAnswer();
