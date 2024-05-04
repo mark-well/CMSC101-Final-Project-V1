@@ -9,7 +9,7 @@ let currentCard = 0;
 let userAnswer = "";
 let correctAnswer = "";
 let savedScore = localStorage.getItem("score");
-let score = savedScore != null ? savedScore : 0;
+let score = savedScore != null ? Number(savedScore) : 0;
 let answeredQuestions = 0;
 
 //Load the questions from the database
