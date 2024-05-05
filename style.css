@@ -435,6 +435,34 @@ footer > .bottom-bar {
 	width: 80%;
 }
 
+.slider > .filler-card {
+	padding: 20px;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.slider > .filler-card > .bar {
+	width: 70px;
+	height: 2px;
+	background-color: var(--text-color);
+	margin: 5px 0;
+}
+.slider > .filler-card > p > i {
+	text-decoration: underline;
+	color: red;
+}
+.slider > .filler-card > h1 {
+	width: 100%;
+	text-align: center;
+	letter-spacing: -1.5px;
+}
+
+.slider > .filler-card > p, h1 {
+	color: var(--text-color);
+	text-align: left;
+	font-family: "Arimo", Sans-Serif;
+}
+
 /* == DESKTOP SCREEN == */
 @media only screen and (min-width: 800px) {
 	nav > .options {
