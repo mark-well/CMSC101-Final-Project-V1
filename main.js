@@ -13,7 +13,11 @@ let score = savedScore != null ? Number(savedScore) : 0;
 let answeredQuestions = 0;
 
 //Load the questions from the database
-let dataFromDatabase = questionsData.data; //This contains all the questions from the database
+fetch("http://localhost:3000/api")
+.then(res => res.json())
+.then(data => {
+	
+let dataFromDatabase = data; //This contains all the questions from the database
 let dataFromLocalstorage = JSON.parse(localStorage.getItem("data"));
 let original = [];
 let questions = [];
@@ -210,3 +214,4 @@ function ScoreCard(){
 	
 	slider.insertAdjacentHTML('beforeend', text);
 }
+});
