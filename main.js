@@ -112,11 +112,6 @@ nextButton.addEventListener("click", () => {
     }
 });
 
-function backToHome() {
-	window.location.href = "index.html";
-	clickSfx.play();
-}
-
 function closeSelectAnswerDisplay() {
 	selectAnswerErrorDisplay.style.display = "none";
 }
@@ -215,3 +210,8 @@ function ScoreCard(){
 	slider.insertAdjacentHTML('beforeend', text);
 }
 });
+
+function backToHome() {
+	window.location.href = "index.html";
+	clickSfx.play();
+}
