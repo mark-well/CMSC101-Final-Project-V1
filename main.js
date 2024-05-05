@@ -13,7 +13,7 @@ let score = savedScore != null ? Number(savedScore) : 0;
 let answeredQuestions = 0;
 
 //Load the questions from the database
-fetch("http://localhost:3000/api")
+fetch("https://cardform.onrender.com/api")
 .then(res => res.json())
 .then(data => {
 	
