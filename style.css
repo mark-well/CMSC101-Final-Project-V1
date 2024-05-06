@@ -90,6 +90,10 @@ nav > .options > div {
 	color: #141E46;
 	user-select: none;
 }
+.home-wrapper > .game-title > span {
+	font-size: 20px;
+	font-family: "Arial", Sans-Serif;
+}
 .home-wrapper > .start-button {
 	font-family: Dynamo-Regular, Sans-Serif;
 	font-size: 16px;
@@ -120,7 +124,7 @@ footer {
 	align-items: center;
 	flex-direction: column;
 	position: absolute;
-	bottom: 0;
+	/*bottom: 0;*/
 	font-family: "Arimo", Sans-Serif;
 }
 footer > h3 {
@@ -406,8 +410,8 @@ footer > .bottom-bar {
 	max-height: 85vh;
 	overflow: auto;
 	padding: 10px;
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 }
 .creator-wrapper > .creator {
 	width: 100%;
@@ -419,6 +423,9 @@ footer > .bottom-bar {
 	margin-bottom: 30px;
 	font-family: "Inter", Sans-Serif;
 }
+.creator-wrapper > .creator-1 {
+	grid-area: 1 / 1 / 2 / 3;
+}
 .creator-wrapper > .creator > img {
 	width: 100px;
 	height: 100px;
@@ -429,6 +436,9 @@ footer > .bottom-bar {
 .creator-wrapper > .creator > .name {
 	font-weight: bold;
 	text-align: center;
+}
+.creator-wrapper > .creator > .role {
+	font-size: 14px;
 }
 .creator-wrapper > .creator > .description {
 	margin-top: 20px;
@@ -469,10 +479,6 @@ footer > .bottom-bar {
 	nav > .options {
 		width: 30%;
 		height: 300px;
-	}
-	.creator-wrapper {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
 	}
 	.creator-wrapper > .creator-1 {
 		grid-area: 1 / 1 / 2 / 3;
@@ -535,5 +541,8 @@ footer > .bottom-bar {
 		width: 60%;
 		height: 40px;
 		font-size: 18px;
+	}
+	.home-wrapper > .game-title > span {
+		font-size: 30px;
 	}
 }
