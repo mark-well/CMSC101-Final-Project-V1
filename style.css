@@ -304,6 +304,7 @@ footer > .bottom-bar {
 	align-items: center;
 	border-radius: 10px;
 	overflow: auto;
+	padding: 6px;
 }
 .slider > .card > .options > .selected {
 	background-color: #1d2e70;
