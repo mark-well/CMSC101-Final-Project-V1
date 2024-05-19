@@ -8,6 +8,7 @@
 	--primary-color: #FFF5E0;
 	--accent-color: #41B06E;
 	--text-color: #141E46;
+	--add-color: #0bd4c0;
 }
 
 @font-face {
@@ -27,7 +28,7 @@ body {
 nav {
 	width: 100%;
 	height: 50px;
-	background-color: #41B06E;
+	background-color: var(--add-color);
 	border-radius: 0 0 30px 0;
 	display: flex;
 	justify-content: flex-end;
