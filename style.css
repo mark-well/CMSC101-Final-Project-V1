@@ -8,7 +8,6 @@
 	--primary-color: #FFF5E0;
 	--accent-color: #41B06E;
 	--text-color: #141E46;
-	--add-color: #0bd4c0;
 }
 
 @font-face {
@@ -28,53 +27,8 @@ body {
 nav {
 	width: 100%;
 	height: 50px;
-	background-color: var(--add-color);
-	border-radius: 0 0 30px 0;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
+	background-color: var(--accent-color);
 	padding: 20px;
-}
-nav > .settings-icon {
-	scale: 1.6;
-	color: #141E46;
-	transition: 250ms all;
-}
-nav > .options {
-	width: 100%;
-	height: 400px;
-	background: #41B06E;
-	color: #141E46;
-	position: absolute;
-	top: -100%;
-	right: 0;
-	border-radius: 0 0 30px 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	transition: 500ms all;
-	transition-timing-function: ease-in-out;
-}
-nav > .options > div {
-	width: 120px;
-	height: 40px;
-	background-color: #F2E0BB;
-	border-radius: 10px;
-	padding: 10px;
-	margin: 10px;
-	font-family: Dynamo-Regular;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	user-select: none;
-}
-#settings-active { display: none;}
-#settings-active:checked ~ .options {
-	top: 0;
-}
-#settings-active:checked ~ .settings-icon {
-	transform: rotate(-90deg);
 }
 .home-wrapper {
 	height: 70vh;
@@ -297,6 +251,9 @@ footer > a {
 	border-radius: 6px;
 	overflow: auto;
 	padding: 2px;
+}
+.slider > .card > .options > .option:hover {
+	background-color: #1d2e70;
 }
 .slider > .card > .options > .selected {
 	background-color: #1d2e70;

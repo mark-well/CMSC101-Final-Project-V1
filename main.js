@@ -135,7 +135,7 @@ function selectAnswer() {
 
         userAnswer = options.querySelector(".selected").dataset.option;
         correctAnswer = questions[currentCard].correctAnswer[0].toUpperCase();
-        optionSelectionSfx.play();
+        //optionSelectionSfx.play();
     });
 }
 
