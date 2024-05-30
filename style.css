@@ -45,6 +45,9 @@ nav {
 	color: #141E46;
 	user-select: none;
 	text-shadow: 0px 7px 13px rgba(179, 143, 59, 1);
+	animation-name: pulse;
+	animation-duration: 2.5s;
+	animation-iteration-count: infinite;
 }
 .home-wrapper > .game-title > span {
 	font-size: 20px;
@@ -258,7 +261,7 @@ footer > a {
 	background-color: #1d2e70;
 }
 .slider > .card > .options > .selected {
-	background-color: #1d2e70;
+	background-color: #0EC166;
 }
 .slider > .score-card > div {
 	width: 100%;
@@ -342,7 +345,7 @@ footer > a {
 /* == CREATORS PAGE == */
 .creators-nav {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	color: #ffffff;
 	font-family: Dynamo-Regular, Sans-Serif;
@@ -350,9 +353,9 @@ footer > a {
 }
 .creators-nav > h1 {
 	color: #ffffff;
+	margin-left: 30px;
 }
 .creators-nav > a {
-	position: absolute;
 	left: 30px;
 	scale: 2;
 	color: #ffffff;
@@ -383,6 +386,10 @@ footer > a {
 	object-fit: cover;
 	margin: 6px;
 	box-shadow: rgba(179, 143, 59, 1) 0px 5px 15px;
+	transition: all 250ms;
+}
+.creator-wrapper > .creator > img:hover {
+	scale: 1.05;
 }
 .creator-wrapper > .creator > .name {
 	font-weight: bold;
