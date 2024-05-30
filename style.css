@@ -5,8 +5,8 @@
 }
 
 :root {
-	--primary-color: #FFF5E0;
-	--accent-color: #41B06E;
+	--primary-color: #F9C852;
+	--accent-color: #403ADA;
 	--text-color: #141E46;
 }
 
@@ -26,7 +26,7 @@ body {
 /* == MAIN PAGE == */
 nav {
 	width: 100%;
-	height: 50px;
+	height: 40px;
 	background-color: var(--accent-color);
 	padding: 20px;
 }
@@ -44,6 +44,7 @@ nav {
 	text-align: center;
 	color: #141E46;
 	user-select: none;
+	text-shadow: 0px 7px 13px rgba(179, 143, 59, 1);
 }
 .home-wrapper > .game-title > span {
 	font-size: 20px;
@@ -57,16 +58,17 @@ nav {
 	height: 40px;
 	border-radius: 10px;
 	color: #ffffff;
-	background-color: #41B06E;
+	background-color: var(--accent-color);
 	border: none;
 	transition: 250ms all;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-decoration: none;
+	box-shadow: rgba(0, 0, 0, 0.10) 0px 5px 15px;
 }
 .home-wrapper > .start-button:hover {
-	background-color: #8DECB4;
+	background-color: #4B44FF;
 }
 .home-wrapper > .start-button:active {
 	scale: 0.9;
@@ -168,7 +170,7 @@ footer > a {
 	transition: 250ms all;
 }
 .main-wrapper > .select-answer-error > .ok-btn:hover {
-	background-color: #8DECB4;
+	background-color: #4B44FF;
 }
 .main-wrapper > .select-answer-error > .ok-btn:active {
 	scale: 0.9;
@@ -211,7 +213,7 @@ footer > a {
 	scale: 0.9;
 }
 .main-wrapper > .next-btn:hover {
-	background-color: #8DECB4;
+	background-color: #4B44FF;
 }
 .slider > .card {
 	width: 100%;
@@ -227,11 +229,11 @@ footer > a {
 .slider > .card > .question {
 	width: 100%;
 	height: 100px;
-	color: var(--text-color);
+	color: #ffffff;
 	margin-bottom: 30px;
 	padding: 10px;
 	font-family: "Arimo", Sans-Serif;
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: bold;
 	overflow-x: hidden;
 	text-align: left;
@@ -339,11 +341,15 @@ footer > a {
 
 /* == CREATORS PAGE == */
 .creators-nav {
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	color: #ffffff;
 	font-family: Dynamo-Regular, Sans-Serif;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
+}
+.creators-nav > h1 {
+	color: #ffffff;
 }
 .creators-nav > a {
 	position: absolute;
@@ -357,27 +363,26 @@ footer > a {
 	overflow: auto;
 	padding: 10px;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	/*grid-template-columns: 1fr 1fr;*/
 }
 .creator-wrapper > .creator {
+	color: var(--text-color);
 	width: 100%;
 	height: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 30px;
+	margin-bottom: 60px;
 	font-family: "Inter", Sans-Serif;
 }
-.creator-wrapper > .creator-1 {
-	grid-area: 1 / 1 / 2 / 3;
-}
 .creator-wrapper > .creator > img {
-	width: 100px;
-	height: 100px;
+	width: 200px;
+	height: 200px;
 	border-radius: 50%;
 	object-fit: cover;
 	margin: 6px;
+	box-shadow: rgba(179, 143, 59, 1) 0px 5px 15px;
 }
 .creator-wrapper > .creator > .name {
 	font-weight: bold;
