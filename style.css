@@ -283,9 +283,11 @@ footer > a {
 	border-radius: 6px;
 	overflow: auto;
 	padding: 2px;
+	transition: all 250ms;
 }
 .slider > .card > .options > .option:hover {
 	background-color: #1d2e70;
+	scale: 1.1;
 }
 .slider > .card > .options > .selected {
 	background-color: #0EC166;
