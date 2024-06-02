@@ -1,3 +1,4 @@
+//New Feature
 let slider = document.querySelector(".slider");
 let nextButton = document.querySelector(".next-btn");
 let cards = slider.querySelectorAll(".card");
