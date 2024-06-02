@@ -2,7 +2,6 @@
 let slider = document.querySelector(".slider");
 let nextButton = document.querySelector(".next-btn");
 let cards = slider.querySelectorAll(".card");
-let scoreDisplay = document.querySelector(".score-display");
 let selectAnswerErrorDisplay = document.querySelector(".select-answer-error");
 let remainingQuestionsDisplay = document.querySelector(
     ".remaining-question-display"
@@ -20,6 +19,27 @@ let dataFromDatabase = questionsData.data; //This contains all the questions fro
 let dataFromLocalstorage = JSON.parse(localStorage.getItem("data"));
 let original = [];
 let questions = [];
+let numberOfQuestion = Number(localStorage.getItem("numberOfQuestionsInput")) || 10;
+
+/*
+if(dataFromLocalstorage == null) {
+	localStorage.setItem("data", JSON.stringify(dataFromDatabase));
+} else {
+	original = dataFromLocalstorage;
+}
+
+let i = 0;
+while(questions.length < numberOfQuestion) {
+	let individualQuestion = original[i];
+	//if(individualQuestion.alreadyAnswered) continue;
+	
+	questions.push(individualQuestion);
+	AddNewCard(individualQuestion);
+	updateDisplay();
+	i += 1;
+}
+*/
+
 
 if (dataFromLocalstorage != null) {
     original = dataFromLocalstorage;
@@ -39,6 +59,7 @@ if (dataFromLocalstorage != null) {
     localStorage.setItem("data", JSON.stringify(dataFromDatabase));
 }
 
+
 //Sound Effects
 var clickSfx = new Howl({ src: ["./sfx/click-sfx.wav"] });
 var errorSfx = new Howl({ src: ["./sfx/error-sfx.wav"] });
@@ -46,16 +67,17 @@ var optionSelectionSfx = new Howl({
     src: ["./sfx/option-selection-sfx.wav"]
 });
 
+
 //Load all the questions
 for (let i = 0; i < original.length; i++) {
     let item = original[i];
 
-    if (item.alreadyAnswered) {
-        answeredQuestions += 1;
+    if (item.answeredCorrectly) {
+        //answeredQuestions += 1;
         continue;
     }
-
-    questions.push(item);
+	
+	if(questions.length < numberOfQuestion) questions.push(item);
 }
 
 if (questions.length == 0) ScoreCard();
@@ -68,9 +90,7 @@ for (let i = 0; i < questions.length; i++) {
 updateDisplay();
 selectAnswer(); //Ask the user to select an answer first
 nextButton.addEventListener("click", () => {
-    let explanationWrapper = cards[currentCard].querySelector(
-        ".explanation-wrapper"
-    );
+    let explanationWrapper = cards[currentCard].querySelector(".explanation-wrapper");
 
     //If user didn't select an answer
     if (userAnswer == "") {
@@ -83,9 +103,7 @@ nextButton.addEventListener("click", () => {
         if (explanationWrapper.style.display == "block") {
             //Set the question to already answered
             let cardId = cards[currentCard].dataset.id;
-            let indexOfCurrentQuestion = original.indexOf(
-                questions.find(item => item._id === cardId)
-            );
+            let indexOfCurrentQuestion = original.indexOf(questions.find(item => item._id === cardId));
             original[indexOfCurrentQuestion].alreadyAnswered = true;
             localStorage.setItem("data", JSON.stringify(original));
 
@@ -146,6 +164,11 @@ function checkAnswerIfCorrect() {
     );
     if (userAnswer.toUpperCase() == correctAnswer) {
         score += 1;
+        //Set the question to answeredCorrectly = treu
+        let cardId = cards[currentCard].dataset.id;
+        let indexOfCurrentQuestion = original.indexOf(questions.find(item => item._id === cardId));
+        original[indexOfCurrentQuestion].answeredCorrectly = true;
+        localStorage.setItem("data", JSON.stringify(original));
         localStorage.setItem("score", score);
         explanationWrapper.querySelector(".top-bar").style.backgroundColor =
             "#18ba59";
@@ -158,8 +181,7 @@ function checkAnswerIfCorrect() {
 }
 
 function updateDisplay() {
-    remainingQuestionsDisplay.innerText = `Questions: ${answeredQuestions}/${original.length}`;
-    scoreDisplay.innerText = `Total Score: ${score}`;
+    remainingQuestionsDisplay.innerText = `Questions: ${answeredQuestions}/${questions.length}`;
 }
 
 function AddNewCard(item) {

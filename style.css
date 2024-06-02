@@ -42,7 +42,7 @@ nav {
 	font-family: Dynamo-Bold, Sans-Serif;
 	font-size: 40px;
 	text-align: center;
-	color: #141E46;
+	color: #ffffff;
 	user-select: none;
 	text-shadow: 0px 7px 13px rgba(179, 143, 59, 1);
 	animation-name: pulse;
@@ -53,6 +53,33 @@ nav {
 	font-size: 20px;
 	font-family: "Arial", Sans-Serif;
 }
+
+.home-wrapper > .select-questions {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	transform: translateY(50px);
+	padding: 10px;
+	gap: 10px;
+}
+
+.home-wrapper > .select-questions > label {
+	font-size: 16px;
+	font-family: "Arial";
+}
+.home-wrapper > .select-questions > select {
+	width: 60px;
+	height: 20px;
+	text-align: center;
+	border: none;
+	background-color: var(--accent-color);
+	border-radius: 3px;
+	outline: none;
+	color: #ffffff;
+}
+
 .home-wrapper > .start-button {
 	font-family: Dynamo-Regular, Sans-Serif;
 	font-size: 16px;
