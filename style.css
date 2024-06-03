@@ -37,6 +37,7 @@ nav {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	gap: 6px;
 }
 .home-wrapper > .game-title {
 	font-family: Dynamo-Bold, Sans-Serif;
@@ -60,7 +61,6 @@ nav {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	transform: translateY(50px);
 	padding: 10px;
 	gap: 10px;
 }
@@ -118,7 +118,7 @@ footer > h3 {
 	font-size: 10px;
 }
 footer > .creators {
-	width: 40%;
+	width: 70%;
 }
 footer > .creators > p {
 	font-size: 9px;
@@ -407,7 +407,13 @@ footer > a {
 	align-items: center;
 	margin-bottom: 60px;
 	font-family: "Inter", Sans-Serif;
+	transition: all 250ms;
+	filter: blur(2.5px);
 }
+.creator-wrapper > .creator:hover {
+	filter: blur(0);
+}
+
 .creator-wrapper > .creator > img {
 	width: 200px;
 	height: 200px;
@@ -474,12 +480,12 @@ footer > a {
 		width: 60%;
 	}
 	.home-wrapper > .game-title {
-		font-size: 80px;
+		font-size: 35px;
 	}
 	.home-wrapper > .start-button {
-		width: 150px;
-		height: 60px;
-		font-size: 26px;
+		width: 110px;
+		height: 40px;
+		font-size: 18px;
 	}
 	footer > h3 {
 		font-size: 16px;
