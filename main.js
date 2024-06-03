@@ -11,7 +11,7 @@ let currentCard = 0;
 let userAnswer = "";
 let correctAnswer = "";
 let savedScore = localStorage.getItem("score");
-let score = savedScore != null ? Number(savedScore) : 0;
+let score = 0;//savedScore != null ? Number(savedScore) : 0;
 let answeredQuestions = 0;
 
 //Load the questions from the database
@@ -169,7 +169,7 @@ function checkAnswerIfCorrect() {
         let indexOfCurrentQuestion = original.indexOf(questions.find(item => item._id === cardId));
         original[indexOfCurrentQuestion].answeredCorrectly = true;
         localStorage.setItem("data", JSON.stringify(original));
-        localStorage.setItem("score", score);
+        //localStorage.setItem("score", score);
         explanationWrapper.querySelector(".top-bar").style.backgroundColor =
             "#18ba59";
     } else {
