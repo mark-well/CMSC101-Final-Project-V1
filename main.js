@@ -220,7 +220,7 @@ function ScoreCard() {
     let text = `
 		<div class="card score-card">
 			<div>
-				<p>Thankyou for Playing!</p>
+				<p class="title">Thankyou for Playing!</p>
 			</div>
 			<div>
 				<p>Total Score: ${score}</p>
