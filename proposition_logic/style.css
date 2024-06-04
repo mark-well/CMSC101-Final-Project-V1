@@ -71,7 +71,7 @@ nav {
 	font-family: "Arial";
 }
 .home-wrapper > .select-questions > select {
-	width: 60px;
+	width: 100px;
 	height: 20px;
 	text-align: center;
 	border: none;
