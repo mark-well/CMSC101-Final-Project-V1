@@ -13,10 +13,11 @@ let correctAnswer = "";
 let savedScore = localStorage.getItem("score");
 let score = 0;//savedScore != null ? Number(savedScore) : 0;
 let answeredQuestions = 0;
+let topic = "module2";
 
 //Load the questions from the database
 let dataFromDatabase = questionsData.data; //This contains all the questions from the database
-let dataFromLocalstorage = JSON.parse(localStorage.getItem("data"));
+let dataFromLocalstorage = JSON.parse(localStorage.getItem(topic));
 let original = [];
 let questions = [];
 let numberOfQuestion = Number(localStorage.getItem("numberOfQuestionsInput")) || 10;
@@ -52,11 +53,11 @@ if (dataFromLocalstorage != null) {
             original.splice(dataFromDatabase.length);
         }
 
-        localStorage.setItem("data", JSON.stringify(original));
+        localStorage.setItem(topic, JSON.stringify(original));
     }
 } else {
     original = dataFromDatabase;
-    localStorage.setItem("data", JSON.stringify(dataFromDatabase));
+    localStorage.setItem(topic, JSON.stringify(dataFromDatabase));
 }
 
 
@@ -105,7 +106,7 @@ nextButton.addEventListener("click", () => {
             let cardId = cards[currentCard].dataset.id;
             let indexOfCurrentQuestion = original.indexOf(questions.find(item => item._id === cardId));
             original[indexOfCurrentQuestion].alreadyAnswered = true;
-            localStorage.setItem("data", JSON.stringify(original));
+            localStorage.setItem(topic, JSON.stringify(original));
 
             //Score Card (this makes sure that there's only one score card at the end)
             if (currentCard + 1 == questions.length) {
@@ -168,7 +169,7 @@ function checkAnswerIfCorrect() {
         let cardId = cards[currentCard].dataset.id;
         let indexOfCurrentQuestion = original.indexOf(questions.find(item => item._id === cardId));
         original[indexOfCurrentQuestion].answeredCorrectly = true;
-        localStorage.setItem("data", JSON.stringify(original));
+        localStorage.setItem(topic, JSON.stringify(original));
         //localStorage.setItem("score", score);
         explanationWrapper.querySelector(".top-bar").style.backgroundColor =
             "#18ba59";

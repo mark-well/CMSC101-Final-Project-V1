@@ -1,0 +1,21 @@
+
+:root {
+	--primary-color: #F9C852;
+	--accent-color: #403ADA;
+	--text-color: #141E46;
+}
+
+@font-face {
+	font-family: Dynamo-Regular;
+	src: url(fonts/Dynamo-Regular.otf);
+}
+@font-face {
+	font-family: Dynamo-Bold;
+	src: url(fonts/Dynamo-Bold.otf);
+}
+
+.home-wrapper > .game-title > span {
+	font-size: 20px;
+	font-family: "Arial", Sans-Serif;
+	color: var(--accent-color);
+}
