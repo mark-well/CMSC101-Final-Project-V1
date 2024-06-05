@@ -120,7 +120,7 @@ nav > .logo-container > a > img {
 .container {
 	margin: 0 auto;
 	height: auto;
-	width: 80%;
+	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -135,6 +135,7 @@ nav > .logo-container > a > img {
 	border-radius: 8px;
 	display: flex;
 	flex: 1 1 100%;
+	row-gap: 16px;
 	flex-direction: column;
 	align-items: center;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -148,11 +149,12 @@ nav > .logo-container > a > img {
 
 .container > .card > .info {
 	width: 100%;
-	height: 100%;
-	padding: 10px;
-	margin-top: 10px;
+	min-height: 100%;
+	padding: 0 6px;
 	color: #ffffff;
 	font-family: "Arial", Sans-Serif;
+	text-align: left;
+	flex-grow: 1;
 }
 
 .container > .card > .info > h2 {
@@ -166,7 +168,7 @@ nav > .logo-container > a > img {
 	display: block;
 	width: 60%;
 	height: 30px;
-	margin: 6px 0;
+	margin: 8px;
 	background-color: var(--button-color);
 	text-align: center;
 	text-decoration: none;
@@ -277,6 +279,13 @@ footer > a {
 @media only screen and (min-width: 768px) {
 	.container > .card {
 		max-width: 200px;
+	}
+	
+	.container > .card > .info > h2 {
+		font-size: 20px;
+	}
+	.container > .card > .info > p {
+		font-size: 12px;
 	}
 	
 	.home-wrapper > .game-title > span {
