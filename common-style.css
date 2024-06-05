@@ -5,12 +5,12 @@
 	box-sizing: border-box;
 }
 
-/*:root {
+:root {
 	--primary-color: #FFF7FC;
 	--accent-color: #5755FE;
 	--text-color: #141E46;
-	--button-color: ##5755FE;
-}*/
+	--button-color: #323096;
+}
 /*:root {
 	--primary-color: #FEFBF6;
 	--accent-color: #ECB159;
@@ -29,12 +29,12 @@
 	--text-color: #000000;
 	--button-color: #A35F52;
 }*/
-:root {
+/*:root {
 	--primary-color: #f1f2f6;
 	--accent-color: #2f3542;
 	--text-color: #121212;
 	--button-color: #57606f;
-}
+}*/
 
 @font-face {
 	font-family: Dynamo-Regular;
@@ -135,7 +135,7 @@ nav > .logo-container > a > img {
 	border-radius: 8px;
 	display: flex;
 	flex: 1 1 100%;
-	row-gap: 16px;
+	row-gap: 12px;
 	flex-direction: column;
 	align-items: center;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -150,7 +150,7 @@ nav > .logo-container > a > img {
 .container > .card > .info {
 	width: 100%;
 	min-height: 100%;
-	padding: 0 6px;
+	padding: 0 8px;
 	color: #ffffff;
 	font-family: "Arial", Sans-Serif;
 	text-align: left;
@@ -290,6 +290,15 @@ footer > a {
 	
 	.home-wrapper > .game-title > span {
 		font-size: 12px;
+	}
+	
+	.creator-wrapper > .creator {
+		min-width: 200px;
+	}
+	
+	.creator-wrapper > .creator > img {
+		width: 150px;
+		height: 150px;
 	}
 	
 	footer > .creators > p > br {

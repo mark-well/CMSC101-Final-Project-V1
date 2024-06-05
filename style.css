@@ -316,6 +316,7 @@ footer > a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: all 250ms;
 }
 .slider > .score-card > div > .back-to-home-btn:active {
 	scale: 0.9;
