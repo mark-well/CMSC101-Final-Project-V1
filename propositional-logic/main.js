@@ -3,45 +3,24 @@ let slider = document.querySelector(".slider");
 let nextButton = document.querySelector(".next-btn");
 let cards = slider.querySelectorAll(".card");
 let selectAnswerErrorDisplay = document.querySelector(".select-answer-error");
-let remainingQuestionsDisplay = document.querySelector(
-    ".remaining-question-display"
-);
+let remainingQuestionsDisplay = document.querySelector(".remaining-question-display");
 let numberOfScoreCard = 0;
 let currentCard = 0;
 let userAnswer = "";
 let correctAnswer = "";
 let savedScore = localStorage.getItem("score");
-let score = 0;//savedScore != null ? Number(savedScore) : 0;
+let score = 0;
 let answeredQuestions = 0;
-let topic = "propositional-logic";
+let topic = "propositional-logic"; //This is the topic of this quiz
 
 //Load the questions from the database
 let dataFromDatabase = questionsData.data; //This contains all the questions from the database
 let dataFromLocalstorage = JSON.parse(localStorage.getItem(topic));
-let original = [];
-let questions = [];
-let numberOfQuestion = Number(localStorage.getItem("numberOfQuestionsInput")) || 10;
+let original = []; //This will contain all the questions
+let questions = []; //This will only contain the questions that have never been answered before or already answered but not correct
+let numberOfQuestion = Number(localStorage.getItem("numberOfQuestionsInput")) || 10; //This is the amount of questions per game session, this will be set by the user, if not it defaults to 10 questions
 
-/*
-if(dataFromLocalstorage == null) {
-	localStorage.setItem("data", JSON.stringify(dataFromDatabase));
-} else {
-	original = dataFromLocalstorage;
-}
-
-let i = 0;
-while(questions.length < numberOfQuestion) {
-	let individualQuestion = original[i];
-	//if(individualQuestion.alreadyAnswered) continue;
-	
-	questions.push(individualQuestion);
-	AddNewCard(individualQuestion);
-	updateDisplay();
-	i += 1;
-}
-*/
-
-
+//This part is responsible for loading the changes from the questions (e.g. new questions are added)
 if (dataFromLocalstorage != null) {
     original = dataFromLocalstorage;
     if (original.length != dataFromDatabase.length) {
@@ -69,18 +48,14 @@ var optionSelectionSfx = new Howl({
 });
 
 
-//Load all the questions
+//Load all the answerable questions to the memory
 for (let i = 0; i < original.length; i++) {
     let item = original[i];
-
-    if (item.answeredCorrectly) {
-        //answeredQuestions += 1;
-        continue;
-    }
-	
+    if (item.answeredCorrectly) continue;
 	if(questions.length < numberOfQuestion) questions.push(item);
 }
 
+//Load the questions as cards
 if (questions.length == 0) ScoreCard();
 for (let i = 0; i < questions.length; i++) {
     let item = questions[i];
@@ -159,6 +134,7 @@ function selectAnswer() {
     });
 }
 
+//This checks if the user's answer is correct
 function checkAnswerIfCorrect() {
     let explanationWrapper = cards[currentCard].querySelector(
         ".explanation-wrapper"
@@ -181,10 +157,13 @@ function checkAnswerIfCorrect() {
     updateDisplay();
 }
 
+
+//This only updates the displays such as the remaining questions
 function updateDisplay() {
     remainingQuestionsDisplay.innerText = `Questions: ${answeredQuestions}/${questions.length}`;
 }
 
+//This add a new card question to the slider
 function AddNewCard(item) {
     let n = "option" + item.correctAnswer.toUpperCase();
     let text = `
@@ -217,6 +196,7 @@ function AddNewCard(item) {
     slider.insertAdjacentHTML("beforeend", text);
 }
 
+//This is the card at the end that displays the total score
 function ScoreCard() {
     let text = `
 		<div class="card score-card">
@@ -231,23 +211,6 @@ function ScoreCard() {
 	`;
 
     slider.insertAdjacentHTML("beforeend", text);
-}
-
-function FillerCard() {
-    let txt = `
-	<div class="card filler-card">
-		<h1>CARD FILLER</h1>
-		<br>
-		<p>If you're seeing this it only means that the <i>database server is currently down</i>,
-		we cannot retrieve the <i>data (questions)</i> for now.</p>
-		<br/>
-		<br>
-		<p>What to do?</p>
-		<div class="bar"></div>
-		<p>Better to contact the developer(s) to inform them about the issue.</p>
-	</div>`;
-
-    slider.insertAdjacentHTML("beforeend", txt);
 }
 
 function backToHome() {
