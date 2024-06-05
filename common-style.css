@@ -6,8 +6,8 @@
 }
 
 :root {
-	--primary-color: #F9C852;
-	--accent-color: #403ADA;
+	--primary-color: #FFF7FC;
+	--accent-color: #5755FE;
 	--text-color: #141E46;
 }
 
@@ -47,6 +47,7 @@ nav > .logo-container {
 nav > .logo-container > h1 {
 	color: #ffffff;
 	font-size: 16px;
+	font-family: "Arial", Sans-Serif;
 }
 
 nav > .logo-container > a > img {
@@ -61,7 +62,7 @@ nav > .logo-container > a > img {
 	justify-content: center;
 	align-items: center;
 	padding: 12px;
-	color: #ffffff;
+	color: var(--text-color);
 	font-family: "Arial", Sans-Serif;
 }
 
@@ -83,10 +84,10 @@ nav > .logo-container > a > img {
 	font-family: Dynamo-Bold, Sans-Serif;
 	font-size: 60px;
 	text-align: center;
-	color: #ffffff;
+	color: var(--text-color);
 	user-select: none;
 	margin: 16px;
-	text-shadow: 0px 7px 13px rgba(179, 143, 59, 1);
+	text-shadow: 0px 7px 13px rgba(0, 0, 0, 0.35);
 	animation-name: pulse;
 	animation-duration: 2.5s;
 	animation-iteration-count: infinite;
