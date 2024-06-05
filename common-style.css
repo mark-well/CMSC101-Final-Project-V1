@@ -34,9 +34,15 @@ nav {
 
 .home-wrapper > .game-title > span {
 	color: var(--accent-color);
+	font-size: 16px;
+}
+.home-wrapper > .game-title > hr {
+	color: var(--accent-color);
+	border: 0.8px solid #ffffff;
 }
 
 .game-title {
+	line-height: 0.5;
 	font-family: Dynamo-Bold, Sans-Serif;
 	font-size: 60px;
 	text-align: center;
@@ -111,13 +117,6 @@ nav {
 
 .container > .card > a:hover {
 	background-color: #273b8c;
-}
-
-@media only screen and (min-width: 768px) {
-	.container > .card {
-		max-width: 200px;
-		max-height: 200px;
-	}
 }
 
 /* == CREATORS PAGE == */
@@ -212,4 +211,15 @@ footer > .creators > p {
 footer > a {
 	font-size: 12px;
 	color: #141E46;
+}
+
+@media only screen and (min-width: 768px) {
+	.container > .card {
+		max-width: 200px;
+		max-height: 200px;
+	}
+	
+	.home-wrapper > .game-title > span {
+		font-size: 12px;
+	}
 }
