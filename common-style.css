@@ -251,7 +251,6 @@ footer > a {
 @media only screen and (min-width: 768px) {
 	.container > .card {
 		max-width: 200px;
-		max-height: 200px;
 	}
 	
 	.home-wrapper > .game-title > span {
