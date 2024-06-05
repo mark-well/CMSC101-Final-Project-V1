@@ -3,13 +3,13 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
+/*
 :root {
 	--primary-color: #FFF7FC;
 	--accent-color: #5755FE;
 	--text-color: #141E46;
 }
-
+*/
 @font-face {
 	font-family: Dynamo-Regular;
 	src: url(../fonts/Dynamo-Regular.otf);
@@ -75,7 +75,7 @@ nav {
 	height: 20px;
 	text-align: center;
 	border: none;
-	background-color: var(--accent-color);
+	background-color: var(--button-color);
 	border-radius: 3px;
 	outline: none;
 	color: #ffffff;
@@ -89,7 +89,7 @@ nav {
 	height: 40px;
 	border-radius: 10px;
 	color: #ffffff;
-	background-color: var(--accent-color);
+	background-color: var(--button-color);
 	border: none;
 	transition: 250ms all;
 	display: flex;
@@ -194,7 +194,7 @@ footer > a {
 	height: 40px;
 	border: none;
 	border-radius: 10px;
-	background-color: var(--accent-color);
+	background-color: var(--button-color);
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	color: #ffffff;
 	font-family: Dynamo-Regular, Sans-Serif;
@@ -233,7 +233,7 @@ footer > a {
 .main-wrapper > .next-btn {
 	width: 80%;
 	height: 40px;
-	background-color: var(--accent-color);
+	background-color: var(--button-color);
 	color: #ffffff;
 	border: none;
 	border-radius: 5px;
@@ -309,7 +309,7 @@ footer > a {
 	padding: 6px;
 	border: none;
 	border-radius: 6px;
-	background-color: var(--accent-color);
+	background-color: var(--button-color);
 	color: #ffffff;
 	text-decoration: none;
 	font-size: 14px;
@@ -371,34 +371,6 @@ footer > a {
 	height: 2px;
 	background-color: #ffffff;
 	margin-bottom: 10px;
-}
-
-.slider > .filler-card {
-	padding: 20px;
-	justify-content: flex-start;
-	align-items: flex-start;
-}
-
-.slider > .filler-card > .bar {
-	width: 70px;
-	height: 2px;
-	background-color: var(--text-color);
-	margin: 5px 0;
-}
-.slider > .filler-card > p > i {
-	text-decoration: underline;
-	color: red;
-}
-.slider > .filler-card > h1 {
-	width: 100%;
-	text-align: center;
-	letter-spacing: -1.5px;
-}
-
-.slider > .filler-card > p, h1 {
-	color: var(--text-color);
-	text-align: left;
-	font-family: "Arimo", Sans-Serif;
 }
 
 /* == DESKTOP SCREEN == */

@@ -5,10 +5,35 @@
 	box-sizing: border-box;
 }
 
-:root {
+/*:root {
 	--primary-color: #FFF7FC;
 	--accent-color: #5755FE;
 	--text-color: #141E46;
+	--button-color: ##5755FE;
+}*/
+/*:root {
+	--primary-color: #FEFBF6;
+	--accent-color: #ECB159;
+	--text-color: #141E46;
+	--button-color: #B67352;
+}*/
+/*:root {
+	--primary-color: #F3F8FF;
+	--accent-color: #7E30E1;
+	--text-color: #141E46;
+	--button-color: #49108B;
+}*/
+/*:root {
+	--primary-color: #ffffff;
+	--accent-color: #6B8A7A;
+	--text-color: #000000;
+	--button-color: #A35F52;
+}*/
+:root {
+	--primary-color: #f1f2f6;
+	--accent-color: #2f3542;
+	--text-color: #121212;
+	--button-color: #57606f;
 }
 
 @font-face {
@@ -142,7 +167,7 @@ nav > .logo-container > a > img {
 	width: 60%;
 	height: 30px;
 	margin: 6px 0;
-	background-color: var(--text-color);
+	background-color: var(--button-color);
 	text-align: center;
 	text-decoration: none;
 	color: #ffffff;
