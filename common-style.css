@@ -164,33 +164,32 @@ nav > .logo-container > a > img {
 	color: #ffffff;
 	font-family: Dynamo-Regular, Sans-Serif;
 	letter-spacing: 1px;
+	gap: 10px;
+	padding: 0 16px;
 }
 .creators-nav > h1 {
 	color: #ffffff;
-	margin-left: 30px;
 }
 .creators-nav > a {
-	left: 30px;
 	scale: 2;
 	color: #ffffff;
 }
 .creator-wrapper {
 	width: 100%;
-	max-height: 85vh;
 	overflow: auto;
 	padding: 10px;
-	display: grid;
-	/*grid-template-columns: 1fr 1fr;*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 12px;
 }
 .creator-wrapper > .creator {
+	min-width: 300px;
 	color: var(--text-color);
-	width: 100%;
-	height: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 60px;
 	font-family: "Inter", Sans-Serif;
 	transition: all 250ms;
 }
@@ -237,6 +236,7 @@ footer > h3 {
 footer > .creators {
 	width: 90%;
 }
+
 footer > .creators > p {
 	font-size: 12px;
 	text-align: center;
@@ -255,5 +255,9 @@ footer > a {
 	
 	.home-wrapper > .game-title > span {
 		font-size: 12px;
+	}
+	
+	footer > .creators > p > br {
+		display: none;
 	}
 }

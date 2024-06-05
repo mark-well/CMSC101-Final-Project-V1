@@ -287,7 +287,6 @@ footer > a {
 	transition: all 250ms;
 }
 .slider > .card > .options > .option:hover {
-	background-color: #1d2e70;
 	scale: 1.05;
 }
 .slider > .card > .options > .selected {
