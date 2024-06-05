@@ -226,7 +226,7 @@ nav > .logo-container > a > img {
 	border-radius: 50%;
 	object-fit: cover;
 	margin: 6px;
-	box-shadow: rgba(179, 143, 59, 1) 0px 5px 15px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	transition: all 250ms;
 }
 .creator-wrapper > .creator > img:hover {
