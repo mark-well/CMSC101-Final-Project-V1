@@ -1,7 +1,7 @@
 (function () {
     //Propositional Logic
     //All the questions
-    let data = [
+    const data = [
         {
             question:
                 "Which of the following statements accurately describes the behavior of the propositional conjunction operator?",

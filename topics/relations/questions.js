@@ -1,7 +1,7 @@
 (function () {
     //Relations
     //All the questions
-    const questions = [
+    const data = [
         {
             question:
                 "Which of the following is the correct definition of the domain of a relation?",

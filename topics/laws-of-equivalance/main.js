@@ -11,7 +11,7 @@ let correctAnswer = "";
 let savedScore = localStorage.getItem("score");
 let score = 0;
 let answeredQuestions = 0;
-let topic = "propositional-logic"; //This is the topic of this quiz
+let topic = "laws-of-equivalance"; //This is the topic of this quiz
 
 //Load the questions from the database
 let dataFromDatabase = questionsData.data; //This contains all the questions from the database
