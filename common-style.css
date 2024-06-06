@@ -5,12 +5,12 @@
 	box-sizing: border-box;
 }
 
-:root {
+/*:root {
 	--primary-color: #FFF7FC;
 	--accent-color: #5755FE;
 	--text-color: #141E46;
 	--button-color: #323096;
-}
+}*/
 /*:root {
 	--primary-color: #FEFBF6;
 	--accent-color: #ECB159;
@@ -23,12 +23,12 @@
 	--text-color: #141E46;
 	--button-color: #49108B;
 }*/
-/*:root {
+:root {
 	--primary-color: #ffffff;
 	--accent-color: #6B8A7A;
 	--text-color: #000000;
 	--button-color: #A35F52;
-}*/
+}
 /*:root {
 	--primary-color: #f1f2f6;
 	--accent-color: #2f3542;
