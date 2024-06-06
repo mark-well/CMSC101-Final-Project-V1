@@ -14,7 +14,7 @@ let answeredQuestions = 0;
 let topic = "propositional-logic"; //This is the topic of this quiz
 
 //Load the questions from the database
-let dataFromDatabase = [] //questionsData.data; //This contains all the questions from the database
+let dataFromDatabase = questionsData.data; //This contains all the questions from the database
 let dataFromLocalstorage = JSON.parse(localStorage.getItem(topic));
 let original = []; //This will contain all the questions
 let questions = []; //This will only contain the questions that have never been answered before or already answered but not correct
