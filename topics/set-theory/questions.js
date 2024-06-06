@@ -13,7 +13,8 @@
             alreadyAnswered: false,
             answeredCorrectly: false,
             explanation:
-                "A well-defined set has clear criteria for membership. The collection of two-digit even numbers is well-defined because it is clear which numbers belong to the set."
+                "A well-defined set has clear criteria for membership. The collection of two-digit even numbers is well-defined because it is clear which numbers belong to the set.",
+            _id: "ABC123defGHI456j"
         },
         {
             question: "What is the cardinality of the set ( {a, b, c, d} )?",
@@ -25,7 +26,8 @@
             alreadyAnswered: false,
             answeredCorrectly: false,
             explanation:
-                "The set ( {a, b, c, d} ) has four elements, so its cardinality is 4."
+                "The set ( {a, b, c, d} ) has four elements, so its cardinality is 4.",
+            _id: "DEF456ghiJKL789m"
         },
         {
             question: "Which symbol represents the empty set?",
@@ -36,7 +38,8 @@
             correctAnswer: "A. Ø",
             alreadyAnswered: false,
             answeredCorrectly: false,
-            explanation: "Ø is the symbol representing the empty set."
+            explanation: "Ø is the symbol representing the empty set.",
+            _id: "GHI789jklMNO012p"
         },
         {
             question:
@@ -49,7 +52,8 @@
             alreadyAnswered: false,
             answeredCorrectly: false,
             explanation:
-                "The union of ( {1, 2, 3} ) and ( {3, 4, 5} ) includes all distinct elements from both sets."
+                "The union of ( {1, 2, 3} ) and ( {3, 4, 5} ) includes all distinct elements from both sets.",
+            _id: "JKL012mnoPQR345q"
         },
         {
             question:
@@ -62,7 +66,8 @@
             alreadyAnswered: false,
             answeredCorrectly: false,
             explanation:
-                "The intersection of ( {a, b, c} ) and ( {b, c, d} ) includes only the elements common to both sets, which are ( b ) and ( c )."
+                "The intersection of ( {a, b, c} ) and ( {b, c, d} ) includes only the elements common to both sets, which are ( b ) and ( c ).",
+            _id: "MNO345pqrSTU678v"
         },
         {
             question:
@@ -75,7 +80,8 @@
             alreadyAnswered: false,
             answeredCorrectly: false,
             explanation:
-                "( A - B ) represents the elements in ( A ) that are not in ( B ). Thus, ( {2, 4, 6} - {4, 6, 8} = {2} )."
+                "( A - B ) represents the elements in ( A ) that are not in ( B ). Thus, ( {2, 4, 6} - {4, 6, 8} = {2} ).",
+            _id: "PQR678stuVWX901y"
         },
         {
             question:
@@ -88,7 +94,8 @@
             alreadyAnswered: false,
             answeredCorrectly: false,
             explanation:
-                "The complement of ( A ) with respect to ( U ) includes all elements in ( U ) that are not in ( A ), which are ( 3 ) and ( 4 )."
+                "The complement of ( A ) with respect to ( U ) includes all elements in ( U ) that are not in ( A ), which are ( 3 ) and ( 4 ).",
+            _id: "STU901vwxYZA234z"
         },
         {
             question:
@@ -101,11 +108,12 @@
             alreadyAnswered: false,
             answeredCorrectly: false,
             explanation:
-                "A proper subset of ( {1, 2, 3} ) is a subset that is not equal to the set itself. ( {1, 2} ) is a proper subset."
+                "A proper subset of ( {1, 2, 3} ) is a subset that is not equal to the set itself. ( {1, 2} ) is a proper subset.",
+            _id: "VWX234yzaBCD5671"
         },
         {
             question:
-                "If ( A = { x | x  is a prime number less than 10 } ), what is ( A )?",
+                "If ( A = { x | x is a prime number less than 10 } ), what is ( A )?",
             optionA: "({1, 2, 3, 5, 7})",
             optionB: "({2, 3, 5, 7})",
             optionC: "({2, 3, 5, 7, 11})",
@@ -114,11 +122,12 @@
             alreadyAnswered: false,
             answeredCorrectly: false,
             explanation:
-                "Prime numbers less than 10 are ( 2, 3, 5, ) and ( 7 )."
+                "Prime numbers less than 10 are ( 2, 3, 5, ) and ( 7 ).",
+            _id: "YZA567bcdEFG8902"
         },
         {
             question:
-                "Which statement is true about the set ( {x  | x  is an even number} )?",
+                "Which statement is true about the set ( {x | x is an even number} )?",
             optionA: "It is a finite set.",
             optionB: "It is an infinite set.",
             optionC: "It is an empty set.",
@@ -127,7 +136,8 @@
             alreadyAnswered: false,
             answeredCorrectly: false,
             explanation:
-                "The set of even numbers is infinite as it continues without end."
+                "The set of even numbers is infinite as it continues without end.",
+            _id: "BCD890efgHIJ1233"
         }
     ];
 
