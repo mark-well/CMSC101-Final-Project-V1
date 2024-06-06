@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Game</title>
+	<link rel="shortcut icon" href="../../logo.png" type="image/x-icon" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="../../common-style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Chivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<script src="main.js" defer type="text/javascript" charset="utf-8"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js" integrity="sha512-xi/RZRIF/S0hJ+yJJYuZ5yk6/8pCiRlEXZzoguSMl+vk2i3m6UjUO/WcZ11blRL/O+rnj94JRGwt/CHbc9+6EA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+	<script src="questions.js" type="text/javascript" charset="utf-8"></script>
+	<!-- status section-->
+	<section class="game-status">
+		<p class="remaining-question-display">Questions: 0/0</p>
+	</section>
+	
+	<!-- main section -->
+	<main class="main-wrapper">
+		<div class="select-answer-error">
+			<div class="text">
+				<p>Please select an answer</p>
+				<span class="bar"></span>
+			</div>
+			<button onclick="closeSelectAnswerDisplay()" class="ok-btn">OK</button>
+		</div>
+		<section class="slider">
+			<!--cards will be placed here-->
+				<!--
+				<div class="card" data-id="${item._id}">
+					<div class="question">
+						<h4>Q. ${item.question}</h4>
+					</div>
+					<div class="options">
+						<div class="option" data-option="a">A. ${item.optionA}</div>
+						<div class="option" data-option="b">B. ${item.optionB}</div>
+						<div class="option" data-option="c">C. ${item.optionC}</div>
+						<div class="option" data-option="d">D. ${item.optionD}</div>
+					</div>
+					<div class="explanation-wrapper">
+						<div class="top-bar"></div>
+						<div class="correct-answer">
+							<p>Correct Answer: </p>
+							<p>${item.correctAnswer}</p>
+						</div>
+						<div class="explanation">
+							<p>Explanation</p>
+							<div class="mid-bar"></div>
+							<div class="text">
+								<p>${item.explanation}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				-->
+		</section>
+		<button class="next-btn">NEXT</button>
+	</main>
+	
+	<!-- footer -->
+	<footer>
+		
+	</footer>
+</body>
+</html>
