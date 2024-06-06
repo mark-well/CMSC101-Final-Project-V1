@@ -211,6 +211,7 @@ function ScoreCard() {
 	`;
 
     slider.insertAdjacentHTML("beforeend", text);
+    nextButton.style.display = "none";
 }
 
 function backToHome() {
