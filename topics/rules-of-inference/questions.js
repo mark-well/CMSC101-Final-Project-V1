@@ -1,4 +1,5 @@
 (function () {
+    //Rules of Inference
     //All the questions
     let data = [
         

@@ -1,4 +1,5 @@
 (function () {
+    //Laws of Equivalence
     //All the questions
     let data = [
         
